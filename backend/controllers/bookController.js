@@ -23,7 +23,7 @@ exports.getBook = async (req, res) => {
     const book = await Book.find();
     res.status(200).json({
       status: "success",
-      results: Book.length,
+      results: book.length,
       data: {
         book: book,
       },
